@@ -4,13 +4,17 @@ body {
   line-height: 1;
 }
 
-textarea {
+.textarea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
+}
+
+.textarea:focus {
+  background: transparent;
 }
 
 .jumbotron {
@@ -31,7 +35,7 @@ textarea {
 }
 
 .row {
-  white-space: pre-wrap;
+  /* white-space: pre-wrap; */
   height: 80px;
   border-top: 1px solid white;
 }
@@ -40,6 +44,8 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding-top: 0.5rem;
+  text-align: right;
 }
 
 .past {
@@ -58,6 +64,7 @@ textarea {
 }
 
 .saveBtn {
+  white-space: pre-wrap;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
