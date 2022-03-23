@@ -1,12 +1,12 @@
 // Work Day Scheduler js
 
 //Set vars
+
 //Dom Vars
 var currentDayElement = $('#currentDay');
 var formElement = $('#event-form');
 
 //Global vars
-//Between 1 to 24
 var schdeduleHours = {
     start : 8,
     end : 17

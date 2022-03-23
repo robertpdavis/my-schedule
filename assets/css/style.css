@@ -1,85 +1,138 @@
+/* Root variables for colour scheme */
+:root {
+  --textarea-colour:#000000;
+  --textarea-border:black;
+  --Jumbo-colour: black;
+  --Jumbo-border: black;
+  --row-border:white;
+  --col-hour-bgcolour:#ffffff;
+  --col-hour-colour:#000000;
+  --col-hour-border:#000000;
+  --past-bgcolour:#d3d3d3;
+  --past-colour:white;
+  --present-bgcolour:#ff6961;
+  --present-colour:white;
+  --future-bgcolour:#77dd77;
+  --future-colour:white;
+  --button-colour:white;
+  --button-bgcolour:#06aed5;
+  --button-border:black;
+}
+
+/* Set base font size */
+html {
+  font-size: 62.5%;
+}
+
+/* Default font style and line spacing */
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 62.5%;
   line-height: 1;
 }
 
 button {
-  margin-top:40%;
+  margin-top:35%;
 }
+
+/* Textare styling for event entries */
 .textarea {
+  font-size: 1.5rem;
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
+  color: var(--textarea-colour);
+  border-left: 1px solid var(--textarea-border);
   padding: 10px;
 }
 
+/* Ensure textarea remains transparent when focused */
 .textarea:focus {
   background: transparent;
 }
 
+/* Hero styling */
 .jumbotron {
   text-align: center;
   background-color: transparent;
-  color: black;
+  color: var(--Jumbo-colour);
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid var(--Jumbo-border);
 }
 
-.description {
-  white-space: pre-wrap;
-}
-
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-}
-
+/* Schedule row styling in addition to bootstrap */
 .row {
   /* white-space: pre-wrap; */
   height: 80px;
-  border-top: 1px solid white;
+  border-top: 1px solid var(--row-border);
 }
 
+/* Hour col styling in addition to bootstrap */
 .hour {
-  font-size: 1rem;
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  font-size: 1.5rem;
+  background-color: var(--col-hour-bgcolour);
+  color: var(--col-hour-colour);
+  border-top: 1px dashed var(--col-hour-border);
   padding-top: 0.5rem;
   padding-left: 0.5rem;
-  text-align: right;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
-}
-
-.saveBtn {
-  font-size: 0.8rem;
   text-align: center;
-  border-left: 1px solid black;
+}
+
+/* Event entry styling for all past items */
+.past {
+  background-color: var(--past-bgcolour);
+  color: var(--past-colour);
+}
+
+/* Event entry styling for all present items */
+.present {
+  background-color: var(--present-bgcolour);
+  color: var(--present-colour);
+}
+
+/* Event entry styling for all future items */
+.future {
+  background-color: var(--future-bgcolour);
+  color: var(--future-colour);
+}
+
+/* Save button col styling in addition to bootstrap */
+.saveBtn {
+  font-size: 1.5rem;
+  text-align: center;
+  border-left: 1px solid var(--button-border);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  background-color: #06aed5;
-  color: white;
+  background-color: var(--button-bgcolour);
+  color: var(--button-colour);
   padding-left:0;
+ 
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+@media screen and (min-width: 768px) {
+  .hour {
+    font-size: 1.8rem;
+  }
+
+  .textarea {
+    font-size: 1.8rem;
+  }
+
+  .saveBtn {
+    font-size: 1.8rem;
+  }
+
+  .saveBtn:hover {
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .lead{
+    font-size: 1.5rem;
+  }
+}
+  
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+/* Same as 768px */
 }
