@@ -1,9 +1,12 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 62.5%;
   line-height: 1;
 }
 
+button {
+  margin-top:40%;
+}
 .textarea {
   background: transparent;
   border: none;
@@ -41,10 +44,12 @@ body {
 }
 
 .hour {
+  font-size: 1rem;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
   padding-top: 0.5rem;
+  padding-left: 0.5rem;
   text-align: right;
 }
 
@@ -64,12 +69,14 @@ body {
 }
 
 .saveBtn {
-  white-space: pre-wrap;
+  font-size: 0.8rem;
+  text-align: center;
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   background-color: #06aed5;
   color: white;
+  padding-left:0;
 }
 
 .saveBtn i:hover {
