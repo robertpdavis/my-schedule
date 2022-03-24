@@ -48,17 +48,18 @@ function scheduleSetup() {
 
         //Create hour column and set hour text
         if (scheduleHour > 0 && scheduleHour < 12){
-            var hourColElement = $("<div>").addClass("col-1 hour").text(scheduleHour + " AM");
+            var hourColElement = $("<div>").text(scheduleHour + " AM");
         } else if (scheduleHour === 12) {
-            var hourColElement = $("<div>").addClass("col-1 hour").text("12 PM");
+            var hourColElement = $("<div>").text("12 PM");
         } else if (scheduleHour != 24) {
-            var hourColElement = $("<div>").addClass("col-1 hour").text(scheduleHour - 12 + " PM");
+            var hourColElement = $("<div>").text(scheduleHour - 12 + " PM");
         } else {
-            var hourColElement = $("<div>").addClass("col-1 hour").text("12 AM");
+            var hourColElement = $("<div>").text("12 AM");
         }
+        hourColElement.addClass("col-2 col-md-1 hour");
 
         //Create text column
-        var descColElement = $("<div>").addClass("col-10 p-0");
+        var descColElement = $("<div>").addClass("col-9 col-md-10 p-0");
         //Set schedule backcolour based on past, present or future
         if (scheduleHour === parseInt(moment().format("k"))) {
             descColElement.addClass("present");
